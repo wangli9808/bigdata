@@ -32,7 +32,7 @@ public class MaxScoreReducer extends Reducer<Text, IntWritable, Text, IntWritabl
         // 最后max的值是最后一个被迭代的值
         for (IntWritable val : values) {
             if (val.get() > max.get())
-                // max = val;
+            // max = val;
             {
                 max.set(val.get());
             }

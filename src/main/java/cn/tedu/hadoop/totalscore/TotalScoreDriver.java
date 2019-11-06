@@ -24,8 +24,8 @@ public class TotalScoreDriver {
         FileOutputFormat.setOutputPath(job, new Path("hdfs://10.42.10.101:9000/result/totalscore"));
 
         if (!job.waitForCompletion(true)) {
-			return;
-		}
+            return;
+        }
     }
 
 }
