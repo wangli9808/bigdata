@@ -9,6 +9,8 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 //import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
+import java.util.ArrayList;
+
 public class AuthDriver {
 
 	public static void main(String[] args) throws Exception {
@@ -36,7 +38,6 @@ public class AuthDriver {
 
 		FileInputFormat.setInputPaths(job, new Path("hdfs://10.42.10.101:9000/txt/score3.txt"));
 		FileOutputFormat.setOutputPath(job, new Path("hdfs://10.42.10.101:9000/result/authscore3"));
-
 		if (!job.waitForCompletion(true)) {
 			return;
 		}
