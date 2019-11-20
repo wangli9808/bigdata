@@ -11,7 +11,7 @@ object Driver {
 
     val sc = new SparkContext(conf)
 
-    val data = sc.textFile("d://ysq/data/topk.txt", 2)
+    val data = sc.textFile("E://data/topk.txt", 2)
 
     //--RDD[String:line]->RDD[String:word]->RDD[(String,Int):(word,1)]
     //--->ReduceByKey->按频次降序->take(3)

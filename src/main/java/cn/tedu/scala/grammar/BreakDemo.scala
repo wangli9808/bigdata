@@ -1,16 +1,18 @@
 package cn.tedu.scala.grammar
 
+// _类似于Java中的*
+
+import scala.util.control.Breaks._
+
 object BreakDemo {
   def main(args: Array[String]): Unit = {
-    breakable(
+    breakable {
       for (i <- 1 to 6) {
         if (i % 3 == 0)
-        // 如果某个方法没有参数，那么在调用的时候可以省略()
-        // break()
-        // 等价
-          break
+          break()
         println(i * i)
-      })
-    println("循环中止~~~")
+      }
+    }
+    println("循环终止")
   }
 }

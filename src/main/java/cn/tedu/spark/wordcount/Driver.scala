@@ -7,8 +7,7 @@ object Driver {
 
   def main(args: Array[String]): Unit = {
 
-    val conf = new SparkConf().setMaster("spark://hadoop01:7077")
-      .setAppName("wordcount")
+    val conf = new SparkConf().setMaster("spark://hadoop01:7077").setAppName("wordcount")
 
     val sc = new SparkContext(conf)
 
